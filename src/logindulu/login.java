@@ -49,6 +49,7 @@ public class login extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         menu = new javax.swing.JMenu();
         Login = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,7 +68,7 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setText("Batal");
+        jButton7.setText("Keluar");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -93,8 +94,8 @@ public class login extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPasswordPass, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPasswordUser))
+                    .addComponent(jPasswordUser)
+                    .addComponent(cmbLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
         PanelLoginLayout.setVerticalGroup(
@@ -170,6 +171,15 @@ public class login extends javax.swing.JFrame {
         });
         menu.add(Login);
 
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("Keluar");
+        jCheckBoxMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem1ActionPerformed(evt);
+            }
+        });
+        menu.add(jCheckBoxMenuItem1);
+
         jMenuBar1.add(menu);
 
         setJMenuBar(jMenuBar1);
@@ -197,11 +207,10 @@ public class login extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(bdatapetugas)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(PanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45))
+                        .addComponent(PanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addComponent(bdataanggota)
@@ -209,9 +218,9 @@ public class login extends javax.swing.JFrame {
                         .addComponent(bdatabuku)
                         .addGap(42, 42, 42)
                         .addComponent(bdatapeminjaman)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bdatapengembalian)
-                        .addGap(28, 28, 28))))
+                        .addGap(38, 38, 38)
+                        .addComponent(bdatapengembalian)))
+                .addGap(39, 39, 39))
             .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
@@ -304,36 +313,47 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
         petugas as=new petugas();
         as.setVisible(true);
-        dispose();
+      
     }//GEN-LAST:event_bdatapetugasActionPerformed
 
     private void bdataanggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bdataanggotaActionPerformed
         // TODO add your handling code here:
         anggota c=new anggota();
         c.setVisible(true);
-        dispose();
+       
     }//GEN-LAST:event_bdataanggotaActionPerformed
 
     private void bdatabukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bdatabukuActionPerformed
         // TODO add your handling code here:
         Databuku a=new Databuku();
         a.setVisible(true);
-        dispose();
+       
     }//GEN-LAST:event_bdatabukuActionPerformed
 
     private void bdatapeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bdatapeminjamanActionPerformed
         // TODO add your handling code here:
         Peminjaman b= new Peminjaman();
         b.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_bdatapeminjamanActionPerformed
 
     private void bdatapengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bdatapengembalianActionPerformed
         // TODO add your handling code here:
         pengembalian sa=new pengembalian();
         sa.setVisible(true);
-        dispose();
+       
     }//GEN-LAST:event_bdatapengembalianActionPerformed
+
+    private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
+        // TODO add your handling code here:
+         int a=JOptionPane.showConfirmDialog(null, "Yakin mau Keluar?","",JOptionPane.YES_NO_OPTION);
+        if(a==0){
+            try {
+                System.exit(0);
+            } catch (Exception e) {
+            }
+        }
+    }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -381,6 +401,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbLevel;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

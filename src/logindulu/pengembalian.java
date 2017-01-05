@@ -375,13 +375,7 @@ private void tampilkembali(){
 
     private void btnkeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkeluarActionPerformed
         // TODO add your handling code here:
-        int a=JOptionPane.showConfirmDialog(null, "Yakin mau Keluar?","",JOptionPane.YES_NO_OPTION);
-        if(a==0){
-            try {
-                System.exit(0);
-            } catch (Exception e) {
-            }
-        }
+        dispose();
     }//GEN-LAST:event_btnkeluarActionPerformed
 
     private void txtterlambatdendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtterlambatdendaActionPerformed

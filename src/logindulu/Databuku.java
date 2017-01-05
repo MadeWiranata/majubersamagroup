@@ -303,14 +303,7 @@ public class Databuku extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        int a=JOptionPane.showConfirmDialog(null, "Yakin mau Keluar?","",JOptionPane.YES_NO_OPTION);
-        if(a==0){
-            try {
-                System.exit(0);
-            } catch (Exception e) {
-            }
-        }
-  
+        dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void txtanggalbeliPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_txtanggalbeliPropertyChange

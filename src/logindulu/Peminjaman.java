@@ -611,7 +611,7 @@ while (rs.next()) {
         txtjumlahpinjam.setText(rs.getString("jlh_pinjam"));
     }
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(rootPane, e);
     }
     }//GEN-LAST:event_txtnopeminjamanActionPerformed
@@ -625,20 +625,15 @@ while (rs.next()) {
             hapus();
             tampilpeminjaman();
             JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus");
-        } catch (Exception e) {
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "pesan salah : "+e);
         }         
     }//GEN-LAST:event_btnhapusActionPerformed
 
     private void btnkeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkeluarActionPerformed
         // TODO add your handling code here:
-         int a=JOptionPane.showConfirmDialog(null, "Yakin mau Keluar?","",JOptionPane.YES_NO_OPTION);
-        if(a==0){
-            try {
-                System.exit(0);
-            } catch (Exception e) {
-            }
-        }
+        dispose();
+        
     }//GEN-LAST:event_btnkeluarActionPerformed
 
     private void txtjumlahpinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtjumlahpinjamActionPerformed
